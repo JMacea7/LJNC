@@ -78,7 +78,7 @@
           <a href="#inicio" class="px-3 py-2 text-sm font-semibold text-brand-700 rounded-lg bg-blue-50">Inicio</a>
           <a href="#avisos" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition">Avisos Recientes</a>
           <a href="#recursos" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition">Rincón TIC & Herramientas</a>
-          <a href="#calendario" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition">Calendario</a>
+          <a href="#calendario" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition">Calendario Escolar</a>
           <a href="#soporte" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-slate-50 rounded-lg transition">Mesa de Ayuda</a>
         </div>
 
@@ -102,7 +102,7 @@
       <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-blue-50">Inicio</a>
       <a href="#avisos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Avisos Recientes</a>
       <a href="#recursos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Rincón TIC & Herramientas</a>
-      <a href="#calendario" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Calendario</a>
+      <a href="#calendario" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Calendario Escolar</a>
       <a href="#soporte" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Mesa de Ayuda</a>
     </div>
   </nav>
@@ -115,17 +115,17 @@
           Transformación Digital Educativa
         </span>
         <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-          Familia Liceo José Núñez de Cáceres
+          Impulsando la innovación pedagógica en el Liceo José Núñez de Cáceres
         </h2>
         <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-          Portal oficial de gestión, recursos digitales y asistencia TIC para los docentes de nuestro centro.
+          Portal oficial de gestión, recursos digitales y asistencia TIC para los docentes y la comunidad educativa de nuestro centro.
         </p>
         <div class="flex flex-wrap gap-3 pt-2">
           <a href="#recursos" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-lg shadow transition flex items-center gap-2">
             <i class="fa-solid fa-layer-group"></i> Explorar Recursos TIC
           </a>
-          <a href="#avisos" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 rounded-lg backdrop-blur border border-white/20 transition flex items-center gap-2">
-            <i class="fa-solid fa-bullhorn"></i> Ver Circulares
+          <a href="#calendario" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-2.5 rounded-lg backdrop-blur border border-white/20 transition flex items-center gap-2">
+            <i class="fa-regular fa-calendar-days text-amber-300"></i> Calendario Escolar Oficial
           </a>
         </div>
       </div>
@@ -160,9 +160,7 @@
     </div>
 
     <!-- Contenedor dinámico de avisos -->
-    <div id="notices-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Los avisos se insertan aquí vía JavaScript -->
-    </div>
+    <div id="notices-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </section>
 
   <!-- SECCIÓN: HUB DE HERRAMIENTAS Y RECURSOS DOCENTES -->
@@ -182,83 +180,42 @@
       </div>
 
       <!-- Tarjetas de recursos -->
-      <div id="resources-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <!-- Recursos se generan con JS -->
-      </div>
+      <div id="resources-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
     </div>
   </section>
 
-  <!-- SECCIÓN: CALENDARIO ESCOLAR Y EVENTOS -->
+  <!-- SECCIÓN: CALENDARIO ESCOLAR OFICIAL INTERACTIVO (GOOGLE CALENDAR + PDF) -->
   <section id="calendario" class="py-12 px-4 sm:px-8 max-w-7xl mx-auto w-full">
-    <div class="mb-8 border-b border-slate-200 pb-4">
-      <div class="flex items-center gap-2 text-brand-700 font-semibold text-xs tracking-wider uppercase mb-1">
-        <i class="fa-regular fa-calendar-days"></i> Planificación Escolar
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4 border-b border-slate-200 pb-4">
+      <div>
+        <div class="flex items-center gap-2 text-brand-700 font-semibold text-xs tracking-wider uppercase mb-1">
+          <i class="fa-regular fa-calendar-days text-amber-500"></i> Cronograma Oficial MINERD
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Calendario Escolar y Efemérides</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Consulta en vivo las efemérides patrias, fechas formativas y actividades institucionales.</p>
       </div>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Próximas Actividades y Fechas Clave</h2>
+
+      <!-- Botón para descargar/ver el PDF oficial en Drive -->
+      <div class="flex-shrink-0">
+        <a href="https://drive.google.com/file/d/1rT0JUWuhPNuxF2G0AGQLoImznGPUYalL/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-sm shadow-sm transition hover:shadow group">
+          <i class="fa-solid fa-file-pdf text-red-700 text-lg group-hover:scale-110 transition-transform"></i> Descargar Calendario Oficial (PDF)
+        </a>
+      </div>
     </div>
 
-    <div class="grid lg:grid-cols-12 gap-8 items-start">
-      <!-- Lista de fechas -->
-      <div class="lg:col-span-7 space-y-4">
-        <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brand-300 transition">
-          <div class="flex-shrink-0 w-14 h-14 rounded-lg bg-blue-50 text-brand-700 flex flex-col items-center justify-center font-bold border border-blue-100">
-            <span class="text-xs uppercase">OCT</span>
-            <span class="text-lg leading-none">28</span>
-          </div>
-          <div>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-100 text-brand-800">Taller Docente</span>
-            <h4 class="font-bold text-slate-900 text-base mt-1">Uso de Formularios de Google para Evaluaciones Rápidas</h4>
-            <p class="text-xs text-slate-500 mt-1">Laboratorio de Informática • 10:00 AM. Se requiere llevar la laptop docente.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brand-300 transition">
-          <div class="flex-shrink-0 w-14 h-14 rounded-lg bg-amber-50 text-amber-700 flex flex-col items-center justify-center font-bold border border-amber-100">
-            <span class="text-xs uppercase">NOV</span>
-            <span class="text-lg leading-none">06</span>
-          </div>
-          <div>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Conmemoración Patria</span>
-            <h4 class="font-bold text-slate-900 text-base mt-1">Día de la Constitución Dominicana</h4>
-            <p class="text-xs text-slate-500 mt-1">Acto cívico especial a cargo del área de Ciencias Sociales.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brand-300 transition">
-          <div class="flex-shrink-0 w-14 h-14 rounded-lg bg-emerald-50 text-emerald-700 flex flex-col items-center justify-center font-bold border border-emerald-100">
-            <span class="text-xs uppercase">NOV</span>
-            <span class="text-lg leading-none">20</span>
-          </div>
-          <div>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Gestión Pedagógica</span>
-            <h4 class="font-bold text-slate-900 text-base mt-1">Cierre y Revisión de Primer Período Evaluativo</h4>
-            <p class="text-xs text-slate-500 mt-1">Revisión de avances y carga en los registros oficiales correspondientes.</p>
-          </div>
-        </div>
+    <!-- Contenedor del Calendario Embebido -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-3 sm:p-5 overflow-hidden">
+      <div class="w-full h-[520px] sm:h-[650px] rounded-xl overflow-hidden border border-slate-200">
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=962ef697aca28332d8d6e5fd2cb747ec637d40390a8f0b589b3b3786c186f19a%40group.calendar.google.com&ctz=America%2FSanto_Domingo&hl=es_419&showTitle=0&showPrint=0&showTabs=1&showCalendars=0&bgcolor=%23ffffff" 
+          style="border: 0; width: 100%; height: 100%;" 
+          frameborder="0" 
+          scrolling="no">
+        </iframe>
       </div>
-
-      <!-- Cuadro Informativo de Horarios y Soporte -->
-      <div class="lg:col-span-5 bg-gradient-to-br from-brand-800 to-slate-900 text-white p-6 rounded-2xl shadow-lg border border-slate-800">
-        <h3 class="text-lg font-bold flex items-center gap-2 mb-3">
-          <i class="fa-solid fa-chalkboard-user text-amber-400"></i> Disponibilidad del Laboratorio TIC
-        </h3>
-        <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-          El laboratorio de informática y las pantallas digitales están a disposición de todos los maestros para impartir clases interactivas o proyectos especiales.
-        </p>
-        <ul class="text-xs space-y-2.5 text-slate-200 border-t border-white/10 pt-4">
-          <li class="flex items-center justify-between">
-            <span><i class="fa-regular fa-clock text-amber-400 mr-2"></i> Tanda Matutina:</span>
-            <span class="font-semibold text-white">8:00 AM – 12:30 PM</span>
-          </li>
-          <li class="flex items-center justify-between">
-            <span><i class="fa-regular fa-clock text-amber-400 mr-2"></i> Tanda Vespertina:</span>
-            <span class="font-semibold text-white">1:30 PM – 4:30 PM</span>
-          </li>
-          <li class="flex items-center justify-between">
-            <span><i class="fa-solid fa-wrench text-amber-400 mr-2"></i> Soporte y Mantenimiento:</span>
-            <span class="font-semibold text-white">Viernes en la tarde</span>
-          </li>
-        </ul>
+      <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2 px-2">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-rotate text-emerald-600"></i> Actualizado automáticamente en tiempo real.</span>
+        <span>Puedes alternar la vista entre <strong>Semana</strong>, <strong>Mes</strong> o <strong>Agenda</strong> en la barra superior del calendario.</span>
       </div>
     </div>
   </section>
@@ -348,6 +305,7 @@
           <li><a href="#inicio" class="hover:text-amber-400 transition">Inicio</a></li>
           <li><a href="#avisos" class="hover:text-amber-400 transition">Circulares y Anuncios</a></li>
           <li><a href="#recursos" class="hover:text-amber-400 transition">Banco de Recursos TIC</a></li>
+          <li><a href="#calendario" class="hover:text-amber-400 transition">Calendario Escolar</a></li>
           <li><a href="#soporte" class="hover:text-amber-400 transition">Solicitud de Asistencia</a></li>
         </ul>
       </div>
@@ -366,7 +324,7 @@
     document.getElementById('current-date').innerHTML = `<i class="fa-regular fa-clock text-amber-400 mr-1"></i> ${formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)}`;
     document.getElementById('year').textContent = today.getFullYear();
 
-    // 2. DATOS DEL TABLÓN DE AVISOS (Edita aquí fácilmente)
+    // 2. DATOS DEL TABLÓN DE AVISOS
     const notices = [
       {
         id: 1,
@@ -417,85 +375,3 @@
             </div>
             <div class="flex items-start gap-3 mb-2">
               <i class="fa-solid ${item.icon} text-lg mt-0.5"></i>
-              <h3 class="font-bold text-slate-900 text-base leading-snug">${item.title}</h3>
-            </div>
-            <p class="text-xs text-slate-600 leading-relaxed">${item.summary}</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center">
-            <span class="text-xs text-brand-700 font-semibold cursor-pointer hover:underline" onclick="alert('${item.summary}')">Leer más &rarr;</span>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function filterNotices(cat) {
-      document.querySelectorAll('.notice-filter-btn').forEach(btn => {
-        btn.classList.remove('active', 'bg-brand-700', 'text-white');
-        btn.classList.add('bg-slate-200', 'text-slate-700');
-      });
-      event.target.classList.add('active', 'bg-brand-700', 'text-white');
-      event.target.classList.remove('bg-slate-200', 'text-slate-700');
-      renderNotices(cat);
-    }
-
-    // 3. DATOS DE RECURSOS TIC
-    const resources = [
-      { name: 'Google Drive Docente', desc: 'Acceso a las carpetas institucionales, planificaciones y documentos compartidos.', icon: 'fa-brands fa-google-drive', link: 'https://drive.google.com', tag: 'drive nube' },
-      { name: 'Google Classroom', desc: 'Plataforma para gestión de clases, asignación de tareas y material para alumnos.', icon: 'fa-solid fa-graduation-cap', link: 'https://classroom.google.com', tag: 'classroom tareas' },
-      { name: 'Herramientas de Evaluación', desc: 'Crea cuestionarios en línea, dinámicas interactivas y rúbricas.', icon: 'fa-solid fa-square-poll-vertical', link: 'https://forms.google.com', tag: 'evaluacion forms quiz' },
-      { name: 'Canva Educativo', desc: 'Diseño de diapositivas, murales e infografías visuales para tus clases.', icon: 'fa-solid fa-palette', link: 'https://canva.com', tag: 'canva diseño visual' }
-    ];
-
-    function renderResources(items) {
-      const grid = document.getElementById('resources-grid');
-      grid.innerHTML = '';
-      items.forEach(res => {
-        const el = document.createElement('a');
-        el.href = res.link;
-        el.target = '_blank';
-        el.className = 'group bg-white p-5 rounded-xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-md transition flex flex-col justify-between';
-        el.innerHTML = `
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center text-lg mb-3 group-hover:bg-brand-700 group-hover:text-white transition">
-              <i class="${res.icon}"></i>
-            </div>
-            <h4 class="font-bold text-slate-900 text-sm mb-1 group-hover:text-brand-700 transition">${res.name}</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">${res.desc}</p>
-          </div>
-          <div class="mt-4 pt-2 text-xs font-semibold text-brand-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-            Abrir herramienta <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </div>
-        `;
-        grid.appendChild(el);
-      });
-    }
-
-    // Buscador en vivo de recursos
-    document.getElementById('resource-search').addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase();
-      const filtered = resources.filter(r => r.name.toLowerCase().includes(term) || r.tag.toLowerCase().includes(term) || r.desc.toLowerCase().includes(term));
-      renderResources(filtered);
-    });
-
-    // Menú móvil
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-
-    // Envío simulado del formulario
-    function handleTicketSubmit(e) {
-      e.preventDefault();
-      document.getElementById('form-success').classList.remove('hidden');
-      e.target.reset();
-      setTimeout(() => {
-        document.getElementById('form-success').classList.add('hidden');
-      }, 5000);
-    }
-
-    // Inicializar
-    renderNotices();
-    renderResources(resources);
-  </script>
-</body>
-</html>
